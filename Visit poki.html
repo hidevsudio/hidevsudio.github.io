@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-image: url("poki.jfif");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .custom-button {
+      font-size: 20px;
+      padding: 10px 20px;
+      background-color:rgb(26, 13, 7);
+      color: rgb(248, 241, 237);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .custom-box {
+      display: flex;
+      gap: 30px; /* space between buttons */
+      background-color: rgb(26, 13, 7);
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    a {
+      text-decoration: none;
+    }
+  </style>
+
+  <script>
+    // Define multiple valid users and their passwords
+    const users = {
+      "SWASTIK19112292": "45845",
+      "Pardeep Sharma": "5",
+      "GUEST": "guestpass"
+    };
+
+    function checkLogin() {
+      var username = document.getElementById("usernameBox").value.trim();
+      var password = document.getElementById("passwordBox").value.trim();
+
+      if (users[username] && users[username] === password) {
+        window.location.href = "https://poki.com/";
+      } else {
+        alert("Access denied! Incorrect username or password.");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="custom-box">
+    <a href="index.html"><button class="custom-button">Home</button></a>
+    <a href="MINDSPARK.html"><button class="custom-button">Mindspark</button></a>
+    <a href="Visit poki.html"><button class="custom-button">Poki</button></a>
+    <a href="Bhavan Vidhyalaya.html"><button class="custom-button">Bhavan Vidhyalaya pkl</button></a>
+  </div>
+  <div class="center">
+    <h1 style="color:red;">Visit Poki</h1>
+    <h4 style="color:rgb(241, 124, 124);">Enter your username and password to visit POKI</h4>
+
+    <p style="color:rgb(177, 235, 143);">USERNAME: <input id="usernameBox" type="text" /></p>
+    <p style="color:rgb(177, 235, 143);">PASSWORD: <input id="passwordBox" type="password" /></p>
+
+    <button class="custom-button" onclick="checkLogin()">Submit</button>
+  </div>
+</body>
+</html>
+
