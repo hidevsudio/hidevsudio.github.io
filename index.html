@@ -1,149 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>pro developer swastik</title>
+  <meta charset="UTF-8">
+  <title>Pro Developer Swastik</title>
   <style>
     body {
-      background-color: rgb(199, 75, 37);
+      background-color: #c44a15;
       margin: 0;
       font-family: Arial, sans-serif;
+      color: #000;
     }
-    .custom-box {
+
+    .navbar {
+      background-color: #1a0d0d;
       display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      background-color: rgb(26, 13, 7);
-      padding: 20px;
-      margin: 10px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      justify-content: center;
+      justify-content: space-around;
+      padding: 15px;
     }
-    .custom-a {
-      background-image: url(mind1.png);
-      padding: 150px;
-      margin: 20px auto;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      max-width: 90%;
-    }
-    .custom-b {
-      background-image: url(poki.jfif);
-      padding: 150px;
-      margin: 20px auto;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      max-width: 90%;
-    }
-    .custom-c {
-      background-image: url(Bhavan.jpg);
-      padding: 150px;
-      margin: 20px auto;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      max-width: 90%;
-    }
-    a {
+
+    .navbar a {
+      color: white;
       text-decoration: none;
+      font-weight: bold;
+      padding: 10px 15px;
     }
-    .custom-button {
-      font-size: 20px;
-      padding: 10px 20px;
-      background-color: rgb(26, 13, 7);
-      color: rgb(248, 241, 237);
-      border: none;
+
+    .navbar a:hover {
+      background-color: #333;
       border-radius: 5px;
-      cursor: pointer;
-      width: 200px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #90d2eb;
+    }
+
+    .content {
+      padding: 20px;
       text-align: center;
     }
 
-    @media (max-width: 768px) {
-      .custom-box {
-        flex-direction: column;
-        align-items: center;
-      }
+    ul {
+      list-style-type: square;
+      text-align: left;
+      max-width: 600px;
+      margin: 20px auto;
+      font-size: 18px;
+      color: #fff; /* White text so it's visible on the orange background */
+    }
 
-      .custom-a, .custom-b, .custom-c {
-        padding: 100px;
-      }
-
-      .custom-button {
-        width: 80%;
-        font-size: 18px;
-      }
+    p {
+      color: white;
+      font-size: 18px;
+      max-width: 700px;
+      margin: 10px auto;
     }
   </style>
-
-  <!-- Alert box -->
-  <div id="customAlert" style="
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1000;
-    font-family: 'Segoe UI', sans-serif;
-  ">
-    <div style="
-      background-color: rgb(26, 13, 7);
-      color: rgb(248, 241, 237);
-      padding: 40px 50px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 0 25px rgba(0,0,0,0.5);
-      max-width: 400px;
-    ">
-      <h2 style="color: rgb(199, 75, 37); margin-bottom: 20px;">🚀 Welcome!</h2>
-      <p style="margin-bottom: 20px;">
-        Thanks for visiting my page.<br>
-        Have fun exploring!
-      </p>
-      <button onclick="closeAlert()" style="
-        padding: 10px 25px;
-        background-color: rgb(199, 75, 37);
-        color: white;
-        font-size: 16px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-      ">Got it</button>
-    </div>
-    <script>
-      function closeAlert() {
-        document.getElementById("customAlert").style.display = "none";
-      }
-      window.onload = function() {
-        document.getElementById("customAlert").style.display = "flex";
-      }
-    </script>
-  </div>
 </head>
-
 <body>
-  <div class="custom-box">
-    <a href="index.html"><button class="custom-button">Home</button></a>
-    <a href="MINDSPARK.html"><button class="custom-button">Mindspark</button></a>
-    <a href="Visit poki.html"><button class="custom-button">Poki</button></a>
-    <a href="Bhavan Vidhyalaya.html"><button class="custom-button">Bhavan Vidhyalaya pkl</button></a>
+
+  <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#mindspark">Mindspark</a>
+    <a href="https://poki.com" target="_blank">Poki</a>
+    <a href="#bhavan">Bhavan Vidhyalaya PKL</a>
   </div>
 
-  <center>
-    <h1 style="color:rgb(136, 211, 211);"> Home </h1>
-  </center>
+  <h1 id="home">Home</h1>
 
-  <h2 style="color:rgb(136, 211, 211);">🔷What you will find here:</h2>
+  <div class="content">
+    <h2>🔷 What you will find here:</h2>
 
-  <div class="custom-a"></div>
-  <div class="custom-b"></div>
-  <div class="custom-c"></div>
+    <h2 id="mindspark">🧠 Mindspark</h2>
+    <p>Learn with fun and logic every day!</p>
+    <p>Sharpen your brain with daily challenges designed to make learning fun and effective.</p>
+
+    <h2 id="bhavan">🏫 Bhavan Vidhyalaya PKL</h2>
+    <p>Resources, tools, and links for students of Bhavan Vidhyalaya Panchkula.</p>
+    <ul>
+      <li>School updates</li>
+      <li>Learning material</li>
+      <li>Events and achievements</li>
+    </ul>
+  </div>
+
 </body>
 </html>
